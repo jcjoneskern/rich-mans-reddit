@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html ng-app="redditMod">
+  <head>
+    <meta charset="utf-8">
+    <title>Rich Man's Reddit</title>
+  </head>
+  <body>
+    <ul ng-controller="redditCtrl">
+      <li ng-repeat="post in posts track by $index">{{post.data.author}}</li>
+    </ul>
+
+
+
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+  </body>
+</html>
