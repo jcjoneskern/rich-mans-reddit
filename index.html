@@ -8,13 +8,26 @@
     <script type="text/javascript" src="js/app.js"></script>
     <script type="text/javascript" src="js/subredditctrl.js"></script>
     <script type="text/javascript" src="js/reqservice.js"></script>
+    <script type="text/javascript" src="js/searchservice.js"></script>
   </head>
   <body>
     <h1>Reddit--</h1>
-    <section ng-controller="subredditCtrl">
-      <article ng-repeat="post in posts">
-        <post-view></post-view>
-      </article>
-    </section>
+
+    <main ng-controller="subredditCtrl">
+      <div id="form">
+        <form>
+          <p>Search r/aww</p>
+          <input type="text" placeholder="Search" ng-model="q">
+          <button ng-click="receiveQuery(q)">Submit</button>
+        </form>
+      </div>
+      <div id="spacer"></div>
+
+      <section>
+        <article ng-repeat="post in posts">
+          <post-view></post-view>
+        </article>
+      </section>
+    </main>
   </body>
 </html>

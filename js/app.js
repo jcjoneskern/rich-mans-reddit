@@ -13,5 +13,4 @@
 
 
 // TODO:
-// * add text input to allow searching
 // * try making the subreddit selectable like the old version
