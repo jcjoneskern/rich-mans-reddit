@@ -5,10 +5,10 @@
     var posts = [];
 
     return {
-      setPosts: function() {
+      setPosts: function(subreddit) {
         var promise = $http({
           method: 'GET',
-          url: 'https://www.reddit.com/r/aww.json'
+          url: 'https://www.reddit.com/r/' + subreddit
         }).then(function successfulCallback(response) {
           posts = response.data.data.children;
         }, function errorCallback(error) {

@@ -10,7 +10,3 @@
   });
 
 })();
-
-
-// TODO:
-// * try making the subreddit selectable like the old version

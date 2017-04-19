@@ -15,16 +15,17 @@
 
     <main ng-controller="subredditCtrl">
       <div id="form">
-        <form>
-          <p>Search r/aww</p>
-          <input type="text" placeholder="Search" ng-model="q">
-          <button ng-click="receiveQuery(q)">Submit</button>
+        <form name="search">
+          <p>Search</p>
+          <input type="text" placeholder="Subreddit Name" name="subreddit" ng-model="subreddit" ng-required="true">
+          <input type="text" placeholder="Seach Term" name="query" ng-model="q">
+          <button ng-disabled="search.$invalid" ng-click="receiveQuery(subreddit, q)">Submit</button>
         </form>
       </div>
       <div id="spacer"></div>
 
       <section>
-        <article ng-repeat="post in posts">
+        <article ng-repeat="post in posts track by $index">
           <post-view></post-view>
         </article>
       </section>
