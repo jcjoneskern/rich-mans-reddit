@@ -11,19 +11,15 @@
     <script type="text/javascript" src="js/searchservice.js"></script>
   </head>
   <body>
-    <h1>Reddit--</h1>
-
     <main ng-controller="subredditCtrl">
-      <div id="form">
-        <form name="search">
-          <p>Search</p>
-          <input type="text" placeholder="Subreddit Name" name="subreddit" ng-model="subreddit" ng-required="true">
-          <input type="text" placeholder="Seach Term" name="query" ng-model="q">
-          <button ng-disabled="search.$invalid" ng-click="receiveQuery(subreddit, q)">Submit</button>
-        </form>
-      </div>
+      <form name="search">
+        <p>Search</p>
+        <input type="text" placeholder="Subreddit Name" name="subreddit" ng-model="subreddit" ng-required="true">
+        <input type="text" placeholder="Seach Term" name="query" ng-model="q">
+        <input id="button" type="submit" value="Submit" ng-disabled="search.$invalid" ng-click="receiveQuery(subreddit, q)">
+      </form>
       <div id="spacer"></div>
-
+      <h1>Reddit--</h1>
       <section>
         <article ng-repeat="post in posts track by $index">
           <post-view></post-view>
