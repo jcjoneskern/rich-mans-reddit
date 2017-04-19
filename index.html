@@ -3,13 +3,17 @@
   <head>
     <meta charset="utf-8">
     <title>Rich Man's Reddit</title>
+    <link rel="stylesheet" href="stylesheet.css">
   </head>
   <body>
-    <ul ng-controller="redditCtrl">
-      <li ng-repeat="post in posts track by $index">{{post.data.author}}</li>
-    </ul>
-
-
+    <section ng-controller="redditCtrl">
+      <article ng-repeat="post in posts track by $index">
+        <img src={{post.data.thumbnail}}>
+        <a href='http://reddit.com{{post.data.permalink}}+'>{{post.data.title}}</a>
+        <p>{{post.data.author}}</p>
+        <p>{{post.data.num_comments}} comments</p></div>
+      </article>
+    </section>
 
     <script type="text/javascript" src="angular.min.js"></script>
     <script type="text/javascript" src="app.js"></script>
