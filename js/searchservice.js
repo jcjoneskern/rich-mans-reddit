@@ -13,7 +13,7 @@
           }).then(function successfulCallback(response) {
             results = response.data.data.children;
           }, function errorCallback(error) {
-            results = 'Please try your search again.'
+            // results = 'Please try your search again.'
             console.log(error);
           });
           return promise;
@@ -24,6 +24,7 @@
           }).then(function successfulCallback(response) {
             results = response.data.data.children;
           }, function errorCallback(error) {
+            // results = 'Please try your search again.'
             console.log(error);
           });
           return promise;
