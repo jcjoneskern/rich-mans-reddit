@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="stylesheet.css">
   </head>
   <body>
-    <section ng-controller="redditCtrl">
+    <section ng-controller="subredditCtrl">
       <article ng-repeat="post in posts track by $index">
         <img src={{post.data.thumbnail}}>
         <a href='http://reddit.com{{post.data.permalink}}+'>{{post.data.title}}</a>
@@ -17,5 +17,6 @@
 
     <script type="text/javascript" src="angular.min.js"></script>
     <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="service.js"></script>
   </body>
 </html>
